@@ -7,4 +7,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Ressources\Images\wpf_logo-removebg.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Ressources\Images\wpf_logo-removebg.png" />
+  </ItemGroup>
+
 </Project>

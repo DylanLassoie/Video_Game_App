@@ -31,5 +31,20 @@ namespace Video_Game_App.View
                 DragMove();
             }
         }
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e) // méthode permettant de réduire la fenêtre
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e) // méthode permettant de fermer la fenêtre
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e) // méthode permettant de se connecter
+        {
+
+        }
     }
 }
