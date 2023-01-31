@@ -8,10 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Ressources\Fonts\Anton-Regular.ttf" />
+    <None Remove="Ressources\Fonts\Pacifico-Regular.ttf" />
     <None Remove="Ressources\Images\wpf_logo-removebg.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Ressources\Fonts\Anton-Regular.ttf" />
+    <Resource Include="Ressources\Fonts\Pacifico-Regular.ttf" />
     <Resource Include="Ressources\Images\wpf_logo-removebg.png" />
   </ItemGroup>
 
