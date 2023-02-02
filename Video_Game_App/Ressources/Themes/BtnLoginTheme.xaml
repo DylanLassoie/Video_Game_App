@@ -1,12 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Style BasedOn="{StaticResource {x:Type Button }}" TargetType="{x:Type Button}" x:Key="btnMinimize" >
+    <Style BasedOn="{StaticResource {x:Type Button }}" TargetType="{x:Type Button}" x:Key="btnLogin" >
         <Style.Setters>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Width="18" Height="18"
-                                    CornerRadius="9"
+                        <Border Width="500" Height="50"
                                     Background="{TemplateBinding Background}">
                             <ContentPresenter VerticalAlignment="Center"
                                                   HorizontalAlignment="Center">
@@ -18,18 +17,17 @@
             </Setter>
             <Setter Property="Background" Value="#28AEED"></Setter>
             <Setter Property="Foreground" Value="White"></Setter>
-            <Setter Property="FontFamily" Value="Arial"></Setter>
             <Setter Property="BorderThickness" Value="0"></Setter>
             <Setter Property="FontSize" Value="16"></Setter>
+            <Setter Property="Margin" Value="0,260,0,20"></Setter>
+            <Setter Property="FontFamily" Value="/Ressources/Fonts/#Anton"></Setter>
         </Style.Setters>
 
-        
+
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="#278BEF"></Setter>
             </Trigger>
         </Style.Triggers>
     </Style>
-
-    
 </ResourceDictionary>

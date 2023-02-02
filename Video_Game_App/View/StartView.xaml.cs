@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Video_Game_App.View
@@ -17,29 +18,21 @@ namespace Video_Game_App.View
     /// <summary>
     /// Logique d'interaction pour StartView.xaml
     /// </summary>
-    public partial class StartView : Window
+    public partial class StartView : Page
     {
         public StartView()
         {
             InitializeComponent();
         }
 
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e) // méthode permettant de bouger la fenêtre
+        private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                DragMove();
-            }
+
         }
 
-        private void btnMinimize_Click(object sender, RoutedEventArgs e) // méthode permettant de réduire la fenêtre
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            WindowState = WindowState.Minimized;
-        }
 
-        private void btnClose_Click(object sender, RoutedEventArgs e) // méthode permettant de fermer la fenêtre
-        {
-            Application.Current.Shutdown();
         }
     }
 }

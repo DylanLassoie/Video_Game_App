@@ -2,12 +2,14 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Video_Game_App"
-             StartupUri="View/StartView.xaml">
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Ressources/Themes/BtnMinimizeTheme.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Ressources/Themes/BtnCloseTheme.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Ressources/Themes/BtnLoginTheme.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Ressources/Themes/BtnRegisterTheme.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

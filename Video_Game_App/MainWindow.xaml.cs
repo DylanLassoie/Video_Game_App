@@ -24,5 +24,23 @@ namespace Video_Game_App
         {
             InitializeComponent();
         }
+
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e) // méthode permettant de bouger la fenêtre
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e) // méthode permettant de réduire la fenêtre
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e) // méthode permettant de fermer la fenêtre
+        {
+            Application.Current.Shutdown();
+        }
     }
 }
