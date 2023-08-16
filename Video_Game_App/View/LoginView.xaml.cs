@@ -11,40 +11,69 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Video_Game_App.Backend;
+using Video_Game_App.Management;
 
 namespace Video_Game_App.View
 {
     /// <summary>
     /// Logique d'interaction pour LoginView.xaml
     /// </summary>
-    public partial class LoginView : Window
+    public partial class LoginView : Page
     {
         public LoginView()
         {
             InitializeComponent();
         }
 
-        private void Window_MouseDown(object sender, MouseButtonEventArgs e) // méthode permettant de bouger la fenêtre
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            if(e.LeftButton == MouseButtonState.Pressed)
+            try 
             {
-                DragMove();
+                string usernames = txtUser.Text;
+                string passwords = txtPassword.Password;
+
+                User user = new User
+                {
+                    usernames = usernames,
+                    passwords = passwords
+                };
+
+                DAO dao = new DAO();
+                bool userExists = dao.CheckUserExists(usernames, passwords);
+
+                if (userExists)
+                {
+                    MessageBox.Show("Login successful!");
+
+                    dao = new DAO();
+                    bool playerExists = dao.CheckPlayerExists(usernames);
+
+                    if (playerExists)
+                    {
+                        NavigationService.Navigate(new Uri("View/PlayerView.xaml", UriKind.Relative));
+                    }
+                    else
+                    {
+                        dao = new DAO();
+                        bool administratorExists = dao.CheckAdministratorExists(usernames);
+
+                        if (administratorExists)
+                        {
+                            NavigationService.Navigate(new Uri("View/AdministratorView.xaml", UriKind.Relative));
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Login failed. Invalid username or password.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
-
-        private void btnMinimize_Click(object sender, RoutedEventArgs e) // méthode permettant de réduire la fenêtre
-        {
-            WindowState = WindowState.Minimized;
-        }
-
-        private void btnClose_Click(object sender, RoutedEventArgs e) // méthode permettant de fermer la fenêtre
-        {
-            Application.Current.Shutdown();
-        }
-
-        private void btnLogin_Click(object sender, RoutedEventArgs e) // méthode permettant de se connecter
-        {
-
-        }
     }
+
 }

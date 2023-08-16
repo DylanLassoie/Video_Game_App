@@ -10,6 +10,7 @@
                 <ResourceDictionary Source="Ressources/Themes/BtnCloseTheme.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Ressources/Themes/BtnLoginTheme.xaml"></ResourceDictionary>
                 <ResourceDictionary Source="Ressources/Themes/BtnRegisterTheme.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Ressources/Themes/BtnMenuTheme.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

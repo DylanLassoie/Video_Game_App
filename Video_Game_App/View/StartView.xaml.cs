@@ -27,12 +27,12 @@ namespace Video_Game_App.View
 
         private void btnRegister_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("View/RegisterView.xaml", UriKind.Relative));
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new Uri("View/LoginView.xaml", UriKind.Relative));
         }
     }
 }

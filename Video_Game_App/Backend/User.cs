@@ -8,5 +8,7 @@ namespace Video_Game_App.Backend
 {
     internal class User
     {
+        public string usernames { get; set; }
+        public string passwords { get; set; }
     }
 }

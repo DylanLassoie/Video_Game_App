@@ -5,13 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Video_Game_App.View"
       mc:Ignorable="d" 
-      d:DesignHeight="760" d:DesignWidth="800"
+      d:DesignHeight="920" d:DesignWidth="1280"
       Title="StartView">
 
     <Border>
 
         <Border.Background>
-            <ImageBrush ImageSource="/Ressources/Images/wpf_logo-removebg.png"
+            <ImageBrush ImageSource="\Ressources\Images\wpf_logo.png"
                                 Stretch="None">
 
             </ImageBrush>
@@ -35,7 +35,7 @@
 
             <StackPanel Width="500"
                             Orientation="Vertical"
-                            Margin="0,10,0,10">
+                            Margin="0,266,0,10">
                 
                 <Button Content="Login"
                         Cursor="Hand"
@@ -51,10 +51,7 @@
                                Margin="0,20,0,20"
                                VerticalAlignment="Center"
                                TextAlignment="Center">
-
                 </TextBlock>
-
-
 
                 <Button Content="Register"
                         Cursor="Hand"

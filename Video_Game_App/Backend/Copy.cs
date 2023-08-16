@@ -8,5 +8,7 @@ namespace Video_Game_App.Backend
 {
     internal class Copy
     {
+        public string usernames { get; set; }
+        public string names { get; set; }
     }
 }

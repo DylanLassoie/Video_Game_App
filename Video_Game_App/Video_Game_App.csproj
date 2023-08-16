@@ -10,13 +10,25 @@
   <ItemGroup>
     <None Remove="Ressources\Fonts\Anton-Regular.ttf" />
     <None Remove="Ressources\Fonts\Pacifico-Regular.ttf" />
+    <None Remove="Ressources\Images\c_logo.png" />
+    <None Remove="Ressources\Images\password_icon.png" />
+    <None Remove="Ressources\Images\user_icon.png" />
     <None Remove="Ressources\Images\wpf_logo-removebg.png" />
+    <None Remove="Ressources\Images\wpf_logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ADO.Net.Client.Core" Version="1.4.5" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Ressources\Fonts\Anton-Regular.ttf" />
     <Resource Include="Ressources\Fonts\Pacifico-Regular.ttf" />
-    <Resource Include="Ressources\Images\wpf_logo-removebg.png" />
+    <Resource Include="Ressources\Images\c_logo.png" />
+    <Resource Include="Ressources\Images\password_icon.png" />
+    <Resource Include="Ressources\Images\user_icon.png" />
+    <Resource Include="Ressources\Images\wpf_logo.png" />
   </ItemGroup>
 
 </Project>
